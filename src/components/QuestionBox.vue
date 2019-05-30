@@ -38,6 +38,12 @@ export default {
       return answers;
     }
   },
+  watch: {
+    currentQuestion() {
+      this.selectedIndex = null;
+      this.shuffleAnswers();
+    }
+  },
   methods: {
     selectAnswer(index) {
       this.selectedIndex = index;
